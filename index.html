@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <script>
+        let table;
+        table = "<table width='300' border='1' cellpadding = '0' cellspacing='3'>";
+        for (i = 2; i <= 9; i++) {
+            table += "<tr>";
+            for (j = 1; j <= 9; j++) {
+                table += "<td>" + i+ "x" +j+"=" + (i*j) +"</td>";
+            }
+            table += "</tr>";
+        }
+        table += "</table>";
+        document.write(table);
+    </script> -->
+    <script>
+
+        document.write("<table border='1px'>");
+
+        document.write("<tr style='font-size:30px;color:#fff;background-color:#000;'>");
+
+        for (i = 1; i < 11; i++) {
+            document.write("<th> [ " + i + " ]</th>");
+        }
+
+        document.write("</tr>");
+
+        for (k = 1; k < 11; k++) {
+            var colorCode = "";
+            if (k % 2 === 0) {
+                colorCode = "#eee";
+            } else {
+                colorCode = "#99e265";
+            }
+            document.write("<tr style='background-color:" + colorCode + "'>");
+
+            for (j = 1; j < 11; j++) {
+                document.write("<td style='font-size:23px;'>" + j + " X " + k + " = " + j * k + "</td>")
+            }
+
+            document.write("</tr>");
+        }
+
+        document.write("</table>");
+
+    </script>
+</body>
+
+</html>
